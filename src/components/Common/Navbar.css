@@ -1,0 +1,57 @@
+
+  
+  .logo-navbar {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .navbar {
+    padding: 0;
+  }
+  
+  .custom-padding {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .btn-search{
+    margin: 1rem;
+    background: var(--color-blanco);
+
+  }
+  .navbar .navbar-nav .nav-item .nav-link.active {
+    color: var(--color-verde-fuerte);
+    padding-bottom: 5px;
+  }
+  
+  .navbar .navbar-nav .nav-item .nav-link {
+    color: var(--color-verde-fuerte);
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .navbar-nav .nav-item .nav-link:hover {
+    color: var(--color-verde-suave);
+  }
+  
+  
+  .custom-icon {
+    font-size: 2.5rem;
+    color:var(--color-verde-fuerte);
+
+  }
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    color: inherit;
+    font-size: 1.5rem; /* tamaño del ícono */
+    display: flex;
+    align-items: center;
+  }
+  
