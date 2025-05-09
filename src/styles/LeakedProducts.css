@@ -1,0 +1,33 @@
+/* Estilos para el área de filtros */
+.area-filtros {
+  display: none; /* Oculto por defecto en móviles */
+}
+.productos-filtrados{
+  flex-direction: column;
+}
+/* Estilos para el botón de filtros (visible solo en móviles) */
+.boton-filtros {
+  display: block; /* Visible por defecto en móviles */
+  margin-top: 10px; /* Espacio debajo del navbar */
+  /* Añade los estilos que prefieras para el botón */
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Media query para pantallas mayores a 550px */
+@media screen and (min-width: 550px) {
+  .area-filtros {
+    display: block; /* Mostrar el área de filtros */
+  }
+  
+  .boton-filtros {
+    display: none; /* Ocultar el botón */
+  }
+  .productos-filtrados{
+    flex-direction: row;
+  }
+}
