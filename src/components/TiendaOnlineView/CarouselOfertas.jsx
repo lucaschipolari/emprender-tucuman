@@ -1,62 +1,46 @@
-import React from 'react'
+import CardProductos from "./CardProductos"; 
 
 const CarouselOfertas = () => {
   return (
     <div id="carouselTiendaOnline" className="carousel slide mt-4" data-bs-ride="carousel">
-        <div className="carousel-inner mx-5">
+        <div className="carousel-inner">
             <div className="carousel-item active">
-            <div className="row row-cols-1 row-cols-md-4 g-3">
-                <div className="col">
-                    <div className="card">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                        <h5 className="card-title">Título de la tarjeta</h5>
-                        <p className="card-text">
-                            Un texto de ejemplo rápido para colocar cerca del título de la tarjeta y
-                            componer la mayor parte del contenido de la tarjeta.
-                        </p>
-                        <a href="#" className="btn btn-primary">
-                            Ir a algún lugar
-                        </a>
-                        </div>
+                <div className="row row-cols-1 row-cols-sm-3 row-cols-md-6 g-3">
+                    <div className="col">
+                        <CardProductos/>
                     </div>
-                </div>
-                <div className="col">
-                    <div className="card">
-                        <img src="..." className="card-img-top" alt="..." />
-                        <div className="card-body">
-                        <h5 className="card-title">Título de la tarjeta</h5>
-                        <p className="card-text">
-                            Otro texto de ejemplo...
-                        </p>
-                        <a href="#" className="btn btn-primary">
-                            Ir a algún lugar
-                        </a>
-                        </div>
+                    <div className="col">
+                        <CardProductos/>
                     </div>
-                </div>
-                <div className="col">
-                    <div className="card">
-                    <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                    <h5 className="card-title">Título de la tarjeta</h5>
-                    <p className="card-text">
-                        Otro texto de ejemplo...
-                    </p>
-                    <a href="#" className="btn btn-primary">
-                        Ir a algún lugar
-                    </a>
+                    <div className="col">
+                        <CardProductos/>
                     </div>
-                </div>
-                </div>
-                <div className="col">
+                    <div className="col">
+                        <CardProductos/>
+                    </div>
+                    <div className="col">
+                        <CardProductos/>
+                    </div>
+                    <div className="col">
+                        <CardProductos/>
+                    </div>
                 </div>
             </div>
-            </div>
-
             <div className="carousel-item">
-            <div className="row row-cols-1 row-cols-md-4 g-3">
-            </div>
+                <div className="row row-cols-1 row-cols-sm-4 g-3">
+                    <div className="col">
+                        <CardProductos/>
+                    </div>
+                    <div className="col">
+                        <CardProductos/>
+                    </div>
+                    <div className="col">
+                        <CardProductos/>
+                    </div>
+                    <div className="col">
+                        <CardProductos/>
+                    </div>
+                </div>
             </div>
         </div>
         <button
