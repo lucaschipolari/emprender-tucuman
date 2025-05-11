@@ -1,0 +1,101 @@
+.bg-verde-fuerte {
+    background-color: var(--color-verde-fuerte);
+}
+
+.bg-verde-suave {
+    background-color: var(--color-verde-suave);
+}
+
+.bg-blanco {
+    background-color: var(--color-blanco);
+}
+
+.text-blanco{
+    color: var(--color-blanco);
+}
+
+.text-verde-fuerte{
+    color: var(--color-verde-fuerte);
+}
+
+.text-size-pequeño{
+    font-size: 0.8rem;
+}
+
+.img-contenedor {
+  width: 100%;
+  height: 130px; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-size-card-producto {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.bg-image-preguntas-frecuentes{
+    background-image: url(https://i.pinimg.com/736x/60/b0/e2/60b0e2b834829c1db8613ef738b73671.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos para ambos carousels */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Estilizar los botones de navegación */
+.carousel-nav-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Eliminar sombra al hacer foco en los botones */
+.carousel-nav-btn:focus,
+.carousel-nav-btn:active {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Aplicar el color verde fuerte a los iconos de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--color-verde-fuerte) !important;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+/* Ícono de siguiente (rotado) */
+.carousel-control-next-icon {
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  transform: rotate(180deg);
+}
+
+/* Ícono de volver atrás */
+.carousel-control-prev-icon {
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+/* Asegurarse que el fondo del botón no sea blanco */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent !important;
+}
+
+/* Eliminar controles predeterminados de ambos carousels */
+#carouselTiendaOnline .carousel-control-prev,
+#carouselTiendaOnline .carousel-control-next,
+#carouselEmprendimientos .carousel-control-prev,
+#carouselEmprendimientos .carousel-control-next {
+  display: none;
+}
