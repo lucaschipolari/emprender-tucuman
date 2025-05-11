@@ -1,3 +1,8 @@
+:root {
+    --color-blanco: #f6f6f6;
+    --color-verde-fuerte: #1A8E73;
+    --color-verde-suave: #C2E0D9;
+}
 #root{
     min-height: 100vh;
     display:flex;

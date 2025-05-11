@@ -1,8 +1,10 @@
+import Navbar from "../components/Common/Navbar";
+
 export const HomeView = () => {
   return (
     <>
       {" "}
-      <div>Home view</div>
+      <Navbar />
     </>
   );
 };
