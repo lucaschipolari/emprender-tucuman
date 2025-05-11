@@ -16,7 +16,7 @@ const rubros = [
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-white border-radius rounded sticky-top">
+    <nav className="navbar navbar-expand-lg bg-white fixed-top">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           <div>
@@ -39,7 +39,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
             <>
               <li className="nav-item">
                 <NavLink
@@ -97,7 +97,10 @@ const Navbar = () => {
               </li>
             </>
           </ul>
-          <form className="d-flex" role="search">
+          <form
+            className="d-flex align-items-center justify-content-center"
+            role="search"
+          >
             <div className="search-bar-wrapper">
               <input
                 className="form-control search-input"
@@ -106,7 +109,7 @@ const Navbar = () => {
                 aria-label="Search"
               />
               <button
-                className=" btn-outline-custom search-button"
+                className="btn-outline-custom search-button"
                 type="submit"
               >
                 <i className="bi bi-search"></i>
@@ -114,7 +117,7 @@ const Navbar = () => {
             </div>
           </form>
           <>
-            <li className="nav-item dropdown list-unstyled m-2">
+            <li className="nav-item dropdown list-unstyled m-2 d-flex justify-content-center">
               <a
                 className="nav-link icon-button"
                 href="#"
