@@ -1,4 +1,5 @@
 import React from "react";
+import EntrepreneurCard from "./EnterpreneurCard";
 
 const CarouselEntrepreneurs = () => {
   return (
@@ -31,67 +32,24 @@ const CarouselEntrepreneurs = () => {
                 className={`carousel-item ${slideIndex === 0 ? "active" : ""}`}
               >
                 <div className="row justify-content-center">
-                  {/* Primera card: siempre visible */}
                   <div className="col-12 col-md-4 d-flex justify-content-center mb-4">
-                    <div className="card" style={{ width: "18rem" }}>
-                      <img
-                        src="https://via.placeholder.com/286x180"
-                        className="card-img-top"
-                        alt="..."
-                      />
-                      <div className="card-body">
-                        <h5 className="card-title">Card 1</h5>
-                        <p className="card-text">Contenido de la card 1.</p>
-                        <a href="#" className="btn btn-primary">
-                          Go
-                        </a>
-                      </div>
-                    </div>
+                    <EntrepreneurCard />
                   </div>
 
-                  {/* Segunda card: solo en pantallas medianas en adelante */}
                   <div className="col-md-4 d-none d-md-flex justify-content-center mb-4">
-                    <div className="card" style={{ width: "18rem" }}>
-                      <img
-                        src="https://via.placeholder.com/286x180"
-                        className="card-img-top"
-                        alt="..."
-                      />
-                      <div className="card-body">
-                        <h5 className="card-title">Card 2</h5>
-                        <p className="card-text">Contenido de la card 2.</p>
-                        <a href="#" className="btn btn-primary">
-                          Go
-                        </a>
-                      </div>
-                    </div>
+                    <EntrepreneurCard />
                   </div>
 
-                  {/* Tercera card: solo en pantallas medianas en adelante */}
                   <div className="col-md-4 d-none d-md-flex justify-content-center mb-4">
-                    <div className="card" style={{ width: "18rem" }}>
-                      <img
-                        src="https://via.placeholder.com/286x180"
-                        className="card-img-top"
-                        alt="..."
-                      />
-                      <div className="card-body">
-                        <h5 className="card-title">Card 3</h5>
-                        <p className="card-text">Contenido de la card 3.</p>
-                        <a href="#" className="btn btn-primary">
-                          Go
-                        </a>
-                      </div>
-                    </div>
+                    <EntrepreneurCard />
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Controles */}
           <button
-            className="carousel-control-prev"
+            className="carousel-control-prev custom-prev"
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev"
@@ -100,7 +58,7 @@ const CarouselEntrepreneurs = () => {
             <span className="visually-hidden">Previous</span>
           </button>
           <button
-            className="carousel-control-next"
+            className="carousel-control-next custom-next"
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next"

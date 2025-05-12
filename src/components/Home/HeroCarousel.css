@@ -3,3 +3,16 @@
     padding: 1rem;
     border-radius: 0.5rem;
   }
+  .custom-prev,
+.custom-next {
+  width: 5% !important;
+}
+.contenedor-carousel{
+    height: 300px;
+    border-radius:20px ;
+}
+.carousel-item {
+    min-height: 300px !important; /* o lo que quieras */
+    display: flex;
+    align-items: center;
+  }
