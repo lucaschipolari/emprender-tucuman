@@ -5,7 +5,6 @@ const CarouselOfertas = () => {
   return (
     <div className="carousel-container">
       <div className="row g-0">
-        {/* Flecha izquierda en columna separada */}
         <div className="col-1 d-flex align-items-center justify-content-center">
           <button
             className="btn carousel-nav-btn"
@@ -17,39 +16,37 @@ const CarouselOfertas = () => {
             <span className="visually-hidden">Anterior</span>
           </button>
         </div>
-        
-        {/* Contenido del carousel en columna central */}
         <div className="col-10">
           <div id="carouselTiendaOnline" className="carousel slide mt-2" data-bs-ride="carousel">
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              <div className="carousel-item">
                 <div className="row g-3">
-                  <div className="col-6 col-sm-3">
+                  <div className="col-6 col-md-3">
                     <CardProductos/>
                   </div>
-                  <div className="col-6 col-sm-3">
+                  <div className="col-6 col-md-3">
                     <CardProductos/>
                   </div>
-                  <div className="d-none d-sm-block col-sm-3">
+                  <div className="d-none d-md-block col-md-3">
                     <CardProductos/>
                   </div>
-                  <div className="d-none d-sm-block col-sm-3">
+                  <div className="d-none d-md-block col-md-3">
                     <CardProductos/>
                   </div>
                 </div>
               </div>
               <div className="carousel-item">
                 <div className="row g-3">
-                  <div className="col-6 col-sm-3">
+                  <div className="col-6 col-md-3">
                     <CardProductos/>
                   </div>
-                  <div className="col-6 col-sm-3">
+                  <div className="col-6 col-md-3">
                     <CardProductos/>
                   </div>
-                  <div className="d-none d-sm-block col-sm-3">
+                  <div className="d-none d-md-block col-md-3">
                     <CardProductos/>
                   </div>
-                  <div className="d-none d-sm-block col-sm-3">
+                  <div className="d-none d-md-block col-md-3">
                     <CardProductos/>
                   </div>
                 </div>
@@ -57,8 +54,6 @@ const CarouselOfertas = () => {
             </div>
           </div>
         </div>
-        
-        {/* Flecha derecha en columna separada */}
         <div className="col-1 d-flex align-items-center justify-content-center">
           <button
             className="btn carousel-nav-btn"
