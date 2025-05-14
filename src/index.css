@@ -5,7 +5,13 @@
     --color-verde-suave: #C2E0D9;
     --color-verde-claro:#86efac;
 }
+#root{
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+}
 
 body {
     overflow-x: hidden;
   }
+  
