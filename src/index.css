@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+:root {
+    --color-blanco: #f6f6f6;
+    --color-verde-fuerte: #1A8E73;
+    --color-verde-suave: #C2E0D9;
+    --color-verde-claro:#86efac;
+}
+#root{
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+body {
+    overflow-x: hidden;
+  }
+  

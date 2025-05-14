@@ -1,0 +1,24 @@
+.filter-selector {
+    border-radius:0px 10px;
+    position: sticky;
+    top: 120px; 
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    width: 300px;
+    background-color: #ffffff;
+    color: var(--color-verde-fuerte);
+    padding: 20px;
+  }
+  
+  .filter-selector input[type="radio"] {
+    margin-right: 5px;
+  }
+  .form-check-input {
+    accent-color: var(--color-verde-fuerte);
+    cursor: pointer;
+  }
+  
+  .form-check-label {
+    cursor: pointer;
+  }
+  
