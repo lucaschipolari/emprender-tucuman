@@ -1,6 +1,8 @@
 import CarouselOfertas from "../components/TiendaOnlineView/CarouselOfertas";
 import CarouselEmprendimientos from "../components/TiendaOnlineView/CarouselEmprendimientos";
 import AcordeonPreguntasFrecuentes from "../components/TiendaOnlineView/AcordeonPreguntasFrecuentes";
+import CarouselRubros from "../components/TiendaOnlineView/CarouselRubros";
+import SectionRubros from "../components/TiendaOnlineView/SectionRubros";
 import '../components/TiendaOnlineView/TiendaOnline.css';
 
 const TiendaOnlineView = () => {
@@ -18,6 +20,7 @@ const TiendaOnlineView = () => {
         </section>
         <section className="rounded-3 bg-blanco mb-4 p-3">
             <h3 >Rubros</h3>
+            <CarouselRubros/>
         </section>
         <section className="rounded-3 bg-blanco mb-4 p-3">
             <h3 >Descubrí los emprendimientos</h3>
@@ -29,6 +32,10 @@ const TiendaOnlineView = () => {
                 </a>
               </div>
             </div>
+        </section>
+        <section className="rounded-3 bg-blanco mb-4 p-3">
+          <h3>Algunas categorias</h3>
+          <SectionRubros/>
         </section>
         <section className="rounded-3 bg-blanco mb-4 row">
             <div className="d-none d-sm-block col-6 p-3">

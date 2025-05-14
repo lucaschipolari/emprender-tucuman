@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 const rubros = [
   "Alimentos y Bebidas",
@@ -15,8 +15,19 @@ const rubros = [
 ];
 
 const Navbar = () => {
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (query.trim() !== "") {
+      navigate("/shop");
+    }
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg bg-white fixed-top">
+    <nav className="navbar navbar-expand-lg bg-white fixed-top custom-navbar">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           <div>
@@ -100,13 +111,16 @@ const Navbar = () => {
           <form
             className="d-flex align-items-center justify-content-center"
             role="search"
+            onSubmit={handleSubmit}
           >
             <div className="search-bar-wrapper">
               <input
                 className="form-control search-input"
                 type="search"
-                placeholder=""
+                placeholder="Buscar..."
                 aria-label="Search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
               />
               <button
                 className="btn-outline-custom search-button"

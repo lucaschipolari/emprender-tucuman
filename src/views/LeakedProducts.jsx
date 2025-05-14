@@ -23,7 +23,7 @@ const LeakedProducts = () => {
       <div className="area-filtros">
         <FilterSelector />
       </div>
-      <div className="flex-grow-1 p-3">
+      <div className="flex-grow-1 p-3 seccion-filtrada">
         <CardLeakedSeccion />
       </div>
     </div>

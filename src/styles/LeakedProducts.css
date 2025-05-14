@@ -8,7 +8,7 @@
 
 .boton-filtros {
   position: sticky;
-  top: 80px; 
+  top: 118px; 
   margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px; 
@@ -19,9 +19,11 @@
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
-  z-index: 1500;
+  z-index: 1000;
 }
-
+.seccion-filtrada{
+  margin-top: 3.5rem;
+}
 
 @media screen and (min-width: 550px) {
   .area-filtros {

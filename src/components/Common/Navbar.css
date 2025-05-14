@@ -5,12 +5,12 @@
     height: 70px;
   }
   
-  .navbar {
-    padding: 0;
-    margin: 20px;
-    border-radius: 20px;
-  }
   
+.custom-navbar {
+  padding: 0;
+  margin: 20px;
+  border-radius: 20px;
+}
   
   .btn-search{
     margin: 1rem;
