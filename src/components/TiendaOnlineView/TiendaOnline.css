@@ -131,7 +131,7 @@
 .carousel-item {
   display: flex;
   align-items: stretch;
-  min-height: 250px;
+  min-height: 250px !important;
 }
 
 
@@ -140,4 +140,9 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+.custom-prev,
+.custom-next {
+  width: 5% !important;
 }

@@ -1,5 +1,6 @@
-import CardProductos from "./CardProductos"; 
-import './TiendaOnline.css';
+import CardProductos from "./CardProductos";
+import CardProducto from "../Common/CardProduct";
+import "./TiendaOnline.css";
 
 const CarouselOfertas = () => {
   return (
@@ -12,42 +13,49 @@ const CarouselOfertas = () => {
             data-bs-target="#carouselTiendaOnline"
             data-bs-slide="prev"
           >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span
+              className="carousel-control-prev-icon custom-prev"
+              aria-hidden="true"
+            />
             <span className="visually-hidden">Anterior</span>
           </button>
         </div>
         <div className="col-10">
-          <div id="carouselTiendaOnline" className="carousel slide mt-2" data-bs-ride="carousel">
+          <div
+            id="carouselTiendaOnline"
+            className="carousel slide mt-2"
+            data-bs-ride="carousel"
+          >
             <div className="carousel-inner">
-              <div className="carousel-item">
+              <div className="carousel-item active">
                 <div className="row g-3">
                   <div className="col-6 col-md-3">
-                    <CardProductos/>
+                    <CardProducto />
                   </div>
                   <div className="col-6 col-md-3">
-                    <CardProductos/>
+                    <CardProducto />
                   </div>
                   <div className="d-none d-md-block col-md-3">
-                    <CardProductos/>
+                    <CardProducto />
                   </div>
                   <div className="d-none d-md-block col-md-3">
-                    <CardProductos/>
+                    <CardProducto />
                   </div>
                 </div>
               </div>
               <div className="carousel-item">
                 <div className="row g-3">
                   <div className="col-6 col-md-3">
-                    <CardProductos/>
+                    <CardProducto />
                   </div>
                   <div className="col-6 col-md-3">
-                    <CardProductos/>
+                    <CardProducto />
                   </div>
                   <div className="d-none d-md-block col-md-3">
-                    <CardProductos/>
+                    <CardProducto />
                   </div>
                   <div className="d-none d-md-block col-md-3">
-                    <CardProductos/>
+                    <CardProducto />
                   </div>
                 </div>
               </div>
