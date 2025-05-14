@@ -56,7 +56,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
-                  to="/"
+                  to="/tiendaonline"
                 >
                   Tienda
                 </NavLink>
@@ -90,7 +90,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
-                  to="/"
+                  to="/favoritos"
                 >
                   Favoritos
                 </NavLink>

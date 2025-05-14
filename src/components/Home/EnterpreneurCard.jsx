@@ -1,5 +1,5 @@
 import React from "react";
-
+import './EnterpreneurCard.css'
 const EntrepreneurCard = ({
   businessName = "Gomitas Bakery",
   ownerName = "De Sofia Perez",
@@ -8,8 +8,8 @@ const EntrepreneurCard = ({
 }) => {
   return (
     <div
-      className="card"
-      style={{ maxWidth: "18rem", backgroundColor: "#d1e7dd" }}
+      className="custom-card card"
+      
     >
       <div className="card-body text-center">
         <img src={imgLink} className="img-fluid" alt="" />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./CarouselHome.css";
+import { Link } from "react-router-dom";
 const CarouselHome = () => {
   return (
     <div className="contenedor-carousel">
@@ -23,7 +24,15 @@ const CarouselHome = () => {
                 <div>
                   <h3 className="subtitulo">Cerca.Local.Real</h3>
                 </div>
-                <button></button>
+                <div className="mt-5">Ir a:</div>
+                <div className="d-flex justify-content-center align-items-center gap-3 btn-container ">
+                  <Link to={"/emprendedores"} className="btn-emprendedores">
+                    Emprendedores
+                  </Link>
+                  <Link to={"/tiendaonline"} className="btn-tienda">
+                    Tienda
+                  </Link>
+                </div>
               </div>
 
               <div className="carousel-overlay" />

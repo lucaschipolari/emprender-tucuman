@@ -7,12 +7,12 @@
 .custom-next {
   width: 5% !important;
 }
-.contenedor-carousel{
+.contenedor-carousel-hero{
     height: 300px;
     border-radius:20px ;
 }
 .carousel-item {
-    min-height: 300px !important; /* o lo que quieras */
+    min-height: 300px !important; 
     display: flex;
     align-items: center;
   }

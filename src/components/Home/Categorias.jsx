@@ -5,7 +5,8 @@ import {
   FaFutbol,
   FaBicycle,
 } from "react-icons/fa";
-
+import "./Categorias.css";
+import { Link } from "react-router-dom";
 const categorias = [
   { icon: <FaTshirt size={30} />, label: "" },
   { icon: <FaHeadphones size={30} />, label: "" },
@@ -20,18 +21,14 @@ const Categorias = () => {
       <h5 className="mb-4">Explorá los rubros</h5>
       <div className="d-flex justify-content-center flex-wrap gap-4">
         {categorias.map((item, idx) => (
-          <div
+          <Link
             key={idx}
-            className="rounded-circle bg-white shadow-sm d-flex flex-column align-items-center justify-content-center"
-            style={{
-              width: "80px",
-              height: "80px",
-              borderBottom: "3px solid #3ba17c",
-            }}
+            className="rounded-circle bg-white shadow-sm d-flex flex-column align-items-center justify-content-center categoria-selector"
+            to={"/error"}
           >
             {item.icon}
             <small className="text-muted">{item.label}</small>
-          </div>
+          </Link>
         ))}
       </div>
       <button className="btn btn-success mt-4">ver más</button>

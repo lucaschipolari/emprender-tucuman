@@ -5,7 +5,7 @@ const HeroCarousel = () => {
   return (
     <div
       id="heroCarousel"
-      className="carousel slide contenedor-carousel"
+      className="carousel slide contenedor-carousel-hero"
       data-bs-ride="carousel"
       data-bs-interval="3000"
     >
