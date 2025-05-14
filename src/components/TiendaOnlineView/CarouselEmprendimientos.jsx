@@ -1,25 +1,23 @@
-import CardEmprendimiento from "./CardEmprendimiento"; 
+import CardEmprendimiento from "./CardEmprendimiento";
 import './TiendaOnline.css';
 
 const CarouselEmprendimiento = () => {
   return (
     <div className="carousel-container">
       <div className="row g-0">
-        {/* Flecha izquierda en columna separada */}
-        <div className="col-1 d-flex align-items-center justify-content-center">
+        <div className="col-auto d-flex align-items-center button-container">
           <button
             className="btn carousel-nav-btn"
             type="button"
             data-bs-target="#carouselEmprendimientos"
             data-bs-slide="prev"
+            aria-label="Anterior"
           >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
-            <span className="visually-hidden">Anterior</span>
+            <div className="carousel-arrow arrow-prev"></div>
           </button>
         </div>
         
-        {/* Contenido del carousel en columna central */}
-        <div className="col-10">
+        <div className="col px-3 carousel-content">
           <div id="carouselEmprendimientos" className="carousel slide mt-4" data-bs-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active">
@@ -52,16 +50,15 @@ const CarouselEmprendimiento = () => {
           </div>
         </div>
         
-        {/* Flecha derecha en columna separada */}
-        <div className="col-1 d-flex align-items-center justify-content-center">
+        <div className="col-auto d-flex align-items-center button-container">
           <button
             className="btn carousel-nav-btn"
             type="button"
             data-bs-target="#carouselEmprendimientos"
             data-bs-slide="next"
+            aria-label="Siguiente"
           >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
-            <span className="visually-hidden">Siguiente</span>
+            <div className="carousel-arrow arrow-next"></div>
           </button>
         </div>
       </div>
