@@ -8,7 +8,16 @@ const EntrepreneurPrivate = () => {
     <div>
       <EntrepreneurProfile />
       <Options />
-      <div className="row">
+      <div className="row m-1">
+        <PublicationCard />
+        <PublicationCard />
+        <PublicationCard />
+        <PublicationCard />
+        <PublicationCard />
+        <PublicationCard />
+        <PublicationCard />
+        <PublicationCard />
+        <PublicationCard />
         <PublicationCard />
       </div>
     </div>
