@@ -2,8 +2,8 @@
 import api from "./axios";
 
 export const getPublicaciones = async () => {
-  const res = await api.get("/publicaciones");
-  return res.data;
+  const res = await api.get("/Publicacion/publicaciones");
+  return res.data.data;
 };
 
 export const getPublicacionesPorUsuario = async (userId) => {
@@ -12,11 +12,27 @@ export const getPublicacionesPorUsuario = async (userId) => {
 };
 
 export const crearPublicacion = async (data) => {
-  const res = await api.post("/publicaciones", data);
+  const res = await api.post("/Publicacion/registrar", data);
+  return res.data;
+};
+
+export const editarPublicacion = async (id, data) => {
+  const res = await api.put(`/Publicacion/editar/${id}`, data);
   return res.data;
 };
 
 export const eliminarPublicacion = async (id) => {
   const res = await api.delete(`/publicaciones/${id}`);
+  return res.data;
+};
+
+export const uploadImagen = async (file) => {
+  const formData = new FormData();
+  formData.append("file", file);
+
+  const res = await api.post("/Upload/upload", formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+
   return res.data;
 };
