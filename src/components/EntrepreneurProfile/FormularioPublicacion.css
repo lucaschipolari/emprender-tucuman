@@ -1,0 +1,16 @@
+
+.form-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 1rem;
+  }
+
+  .modal-content {
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+}

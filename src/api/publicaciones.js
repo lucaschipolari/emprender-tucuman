@@ -5,7 +5,10 @@ export const getPublicaciones = async () => {
   const res = await api.get("/Publicacion/publicaciones");
   return res.data.data;
 };
-
+export const getPublicacionesEmprendedor = async () => {
+  const res = await api.get("/Publicacion/publicaciones/emprendedor");
+  return res.data.data;
+};
 export const getPublicacionesPorUsuario = async (userId) => {
   const res = await api.get(`/usuarios/${userId}/publicaciones`);
   return res.data;
