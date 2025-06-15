@@ -9,6 +9,7 @@ import LeakedProducts from "../views/LeakedProducts";
 import Error404 from "../components/NotFoundView/Error404";
 import EntrepreneurProfile from "../components/EntrepreneurProfile/EntrepreneurProfile.jsx";
 import EntrepreneurPrivate from "../views/EntrepreneurPrivate.jsx";
+import AdminUsuarios from "../views/AdminUsuarios.jsx";
 
 
 export const router = createBrowserRouter([
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: "/perfil-emprendedor",
         element: <EntrepreneurPrivate />,
+      },
+      {
+        path: "/admin",
+        element: <AdminUsuarios />,
       },
       {
         path: "*",
