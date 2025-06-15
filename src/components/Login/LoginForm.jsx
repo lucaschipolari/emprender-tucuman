@@ -36,7 +36,7 @@ const LoginForm = () => {
 
       login(userData);
       setTimeout(() => {
-          navigate("/register");
+          navigate("/tiendaonline");
         }, 1000);
       setTimeout(() => {
         toast.dismiss();

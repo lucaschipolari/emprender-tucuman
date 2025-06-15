@@ -1,0 +1,8 @@
+.custom-card{ 
+    max-width: 18rem;
+}
+.custom-card{
+    .card-body{
+    background-color: var(--color-verde-suave); 
+
+}}
