@@ -1,0 +1,17 @@
+.categoria-selector {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--color-verde-suave);
+    border-bottom: 7px solid var(--color-verde-suave);
+    cursor: pointer;
+    text-decoration: none;  
+    color: inherit;
+    outline: none;
+    transition: transform 0.3s ease, border 0.3s ease; 
+}
+
+.categoria-selector:hover {
+    transform: scale(1.1); 
+    border: 3px solid var(--color-verde-suave); 
+    border-radius: 50%; 
+}

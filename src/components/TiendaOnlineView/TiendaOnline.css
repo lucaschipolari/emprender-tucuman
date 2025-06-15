@@ -1,0 +1,169 @@
+.bg-verde-fuerte {
+    background-color: var(--color-verde-fuerte);
+}
+
+.bg-verde-suave {
+    background-color: var(--color-verde-suave);
+}
+
+.bg-blanco {
+    background-color: var(--color-blanco);
+}
+
+.text-blanco{
+    color: var(--color-blanco);
+}
+
+.text-verde-fuerte{
+    color: var(--color-verde-fuerte);
+}
+
+.text-size-pequeño{
+    font-size: 0.8rem;
+}
+
+.text-size-mediano{
+    font-size: 1rem;
+}
+
+.text-size-grande{
+    font-size: 1.3rem;
+}
+
+.card {
+  box-sizing: border-box;
+}
+
+.padding-tiendaonline{
+  padding-top: 120px;
+}
+
+.img-contenedor {
+  width: 100%;
+  height: 120px; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-size-card-producto {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.img-contenedor-emprendimiento {
+  width: 100%;
+  height: 150px; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.img-size-card-emprendimiento {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bg-image-preguntas-frecuentes{
+    background-image: url(https://i.pinimg.com/736x/60/b0/e2/60b0e2b834829c1db8613ef738b73671.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-content {
+  flex: 1;
+}
+
+.button-container {
+  min-width: 40px;
+  padding: 0 5px;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+.carousel-nav-btn {
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.carousel-nav-btn:focus,
+.carousel-nav-btn:active {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Flechas sólidas verdes */
+.carousel-arrow {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-verde-fuerte);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.arrow-prev {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.arrow-next {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+.arrow-prev {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+.arrow-next {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+.carousel-item {
+  display: flex;
+  align-items: stretch;
+  min-height: 250px !important;
+}
+
+#carouselTiendaOnline .carousel-control-prev,
+#carouselTiendaOnline .carousel-control-next {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .carousel-inner .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.custom-prev,
+.custom-next {
+  width: 5% !important;
+}
