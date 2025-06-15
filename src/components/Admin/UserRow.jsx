@@ -9,20 +9,17 @@ const UserRow = ({
 }) => {
   const [cargando, setCargando] = useState(false);
 
-  // Mapeo de colores por nombre de rol
   const colorMap = {
     Cliente: "secondary",
     Vendedor: "success",
     Administrador: "danger",
   };
 
-  // ✅ Validación mejorada para evitar errores
   const rolActual =
     roles.length > 0
       ? roles.find((r) => r.id === usuario.rolId) || roles[0]
       : null;
 
-  // Si no hay roles cargados aún, mostrar loading
   if (!roles.length || !rolActual) {
     return (
       <tr>
@@ -68,7 +65,7 @@ const UserRow = ({
     const permisos = [];
     if (nivel >= 1) permisos.push("Comprar");
     if (nivel >= 2) permisos.push("Vender");
-    if (nivel >= 4) permisos.push("Administrar");
+    if (nivel >= 3) permisos.push("Administrar");
     return permisos;
   };
 

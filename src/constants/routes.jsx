@@ -10,7 +10,8 @@ import Error404 from "../components/NotFoundView/Error404";
 import EntrepreneurProfile from "../components/EntrepreneurProfile/EntrepreneurProfile.jsx";
 import EntrepreneurPrivate from "../views/EntrepreneurPrivate.jsx";
 import AdminUsuarios from "../views/AdminUsuarios.jsx";
-
+import AdminDashboard from "../components/AdminDashboard/AdminDashboard.jsx";
+import AdminMenu from "../views/AdminMenu.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +23,6 @@ export const router = createBrowserRouter([
         element: <HomeView />,
       },
       {
-
         path: "login",
         element: <LoginView />,
       },
@@ -30,6 +30,7 @@ export const router = createBrowserRouter([
         path: "register",
         element: <RegisterView />,
       },
+      {
         path: "tiendaonline",
         element: <TiendaOnlineView />,
       },
@@ -43,7 +44,15 @@ export const router = createBrowserRouter([
       },
       {
         path: "/admin",
+        element: <AdminMenu />,
+      },
+      {
+        path: "/admin/usuarios",
         element: <AdminUsuarios />,
+      },
+      {
+        path: "/admin/dashboard",
+        element: <AdminDashboard />,
       },
       {
         path: "*",

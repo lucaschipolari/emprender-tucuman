@@ -7,6 +7,7 @@ import {
   desactivarUsuario,
 } from "../api/usuarios";
 import Admin from "../components/Admin/Admin";
+import UserTableWithSearch from "../components/Admin/UserTable";
 
 const AdminUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -95,7 +96,7 @@ const AdminUsuarios = () => {
         </div>
       )}
 
-      <UserTable
+      <UserTableWithSearch
         usuarios={usuarios}
         setUsuarios={setUsuarios} // ✅ Pasar setUsuarios para que UserTable pueda actualizar el estado
         onChangeRol={manejarCambioRol}

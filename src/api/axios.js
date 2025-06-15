@@ -7,12 +7,12 @@ const api = axios.create({
   },
 });
 
-// Si tenés JWT:
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (token) config.headers.Authorization = `Bearer ${token}`;
+  const token = sessionStorage.getItem("token"); // ✅ cambiar esto
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
   return config;
 });
 
 export default api;
-
