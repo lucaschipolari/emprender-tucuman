@@ -7,7 +7,8 @@ import RegisterView from "../views/RegisterView";
 import TiendaOnlineView from "../views/TiendaOnlineView.jsx";
 import LeakedProducts from "../views/LeakedProducts";
 import Error404 from "../components/NotFoundView/Error404";
-
+import EntrepreneurProfile from "../components/EntrepreneurProfile/EntrepreneurProfile.jsx";
+import EntrepreneurPrivate from "../views/EntrepreneurPrivate.jsx";
 
 
 export const router = createBrowserRouter([
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "/shop",
         element: <LeakedProducts />,
+      },
+      {
+        path: "/perfil-emprendedor",
+        element: <EntrepreneurPrivate />,
       },
       {
         path: "*",
