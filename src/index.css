@@ -3,10 +3,7 @@
     --color-blanco: #f6f6f6;
     --color-verde-fuerte: #1A8E73;
     --color-verde-suave: #C2E0D9;
-    --color-verde-claro:#86efac;
   --verde-clarito: #86efac;
-  --blanco: #f6f6f6;
-  --verde-fuerte: #1A8E73;
   --verde-suave: #bce8dc; 
 }
 #root{
@@ -17,4 +14,5 @@
 
 body {
     overflow-x: hidden;
-  }
+}
+
