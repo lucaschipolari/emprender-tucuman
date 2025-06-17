@@ -51,7 +51,8 @@ const UsuarioTabla = ({ filters }) => {
   }).then(async(result) => {
     if (result.isConfirmed) {
       try {
-        await deleteUserFn(user.Id);
+        console.log(user.id);
+        await deleteUserFn(user.id);
         Swal.fire('Eliminado', 'El usuario ha sido eliminado.', 'success');
         queryClient.invalidateQueries(["users"]);
       } catch (error) {
