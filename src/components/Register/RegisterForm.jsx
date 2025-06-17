@@ -24,21 +24,20 @@ const RegisterForm = () => {
     watch,
   } = useForm();
 
-  // Observar el valor de la contraseña para comparar
   const password = watch("password");
 
   const { mutate: postRegister } = useMutation({
     mutationFn: postRegisterFn,
     onSuccess: (userData) => {
-      console.log(userData);
       toast.dismiss();
-      toast.success(`Registrado. Bienvenido, ${userData.nombre}`);
+      console.log(userData);
+      toast.success(`Registrado. Bienvenido, ${userData.unique_name}`);
 
       reset();
       login(userData);
 
       setTimeout(() => {
-        navigate("/login");
+        navigate("/tiendaonline");
       }, 2000);
     },
     onError: (e) => {

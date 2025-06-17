@@ -1,7 +1,7 @@
 .register-form-view {
     background: linear-gradient(225deg,
-        var(--verde-fuerte) 0%,
-        color-mix(in srgb, var(--verde-fuerte), var(--verde-suave) 50%) 25%,
+        var(--color-verde-fuerte) 0%,
+        color-mix(in srgb, var(--color-verde-fuerte), var(--verde-suave) 50%) 25%,
         var(--verde-suave) 50%,
         color-mix(in srgb, var(--verde-suave), var(--verde-clarito) 40%) 75%,
         var(--verde-clarito) 100%);
@@ -31,7 +31,7 @@
 }
 
 .btn-custom{
-    background-color: var(--verde-fuerte);
+    background-color: var(--color-verde-fuerte);
   color: white;
   border: none;
   border-radius: 15px; 
@@ -40,7 +40,7 @@
 }
 
 .a-custom{
-    color: var(--verde-fuerte);
+    color: var(--color-verde-fuerte);
     text-decoration: none;
 }
 

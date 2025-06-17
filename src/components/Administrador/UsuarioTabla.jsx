@@ -24,7 +24,7 @@ const UsuarioTabla = ({ filters }) => {
     }
   });
 
-  const { data: roles, isLoading: loadingRoles } = useQuery({
+  const { data: roles, } = useQuery({
     queryKey: ["roles"],
     queryFn: getRolesFn,
   }); 

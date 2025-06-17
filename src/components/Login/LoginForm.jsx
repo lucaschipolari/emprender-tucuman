@@ -24,32 +24,33 @@ const LoginForm = () => {
   } = useForm();
 
   const { mutate: postLogin } = useMutation({
-    mutationFn: postLoginFn,
-    onSuccess: (userData) => {
-      toast.dismiss();
-      toast.success(`Bienvenido, ${userData.unique_name}`);
-      setTimeout(() => {
-        toast.dismiss();
-      }, 2000);
+  mutationFn: postLoginFn,
+  onSuccess: (userData) => {
+    toast.dismiss();
+    toast.success(`Bienvenido, ${userData.unique_name}`);
+    
+    reset();
+    login(userData); 
 
-      reset();
+    const esAdmin = userData.RolId == 3;
 
-      login(userData);
-      setTimeout(() => {
-          navigate("/register");
-        }, 1000);
-      setTimeout(() => {
-        toast.dismiss();
-      }, 1500);
-    },
-    onError: (e) => {
+    setTimeout(() => {
+      navigate(esAdmin ? "/admin" : "/tiendaonline");
+    }, 1000);
+
+    setTimeout(() => {
       toast.dismiss();
-      toast.warning(e.message);
-      setTimeout(() => {
-        toast.dismiss();
-      }, 2000);
-    },
-  });
+    }, 1500);
+  },
+  onError: (e) => {
+    toast.dismiss();
+    toast.warning(e.message);
+    setTimeout(() => {
+      toast.dismiss();
+    }, 2000);
+  },
+});
+
 
   const handleSubmit = (data) => {
     toast.loading("Cargando...");

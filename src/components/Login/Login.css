@@ -3,8 +3,8 @@
               var(--verde-clarito) 0%,
               color-mix(in srgb, var(--verde-clarito), var(--verde-suave) 60%) 25%,
               var(--verde-suave) 50%,
-              color-mix(in srgb, var(--verde-suave), var(--verde-fuerte) 40%) 75%,
-              var(--verde-fuerte) 100%);
+              color-mix(in srgb, var(--verde-suave), var(e) 40%) 75%,
+              var(e) 100%);
     min-height: 100vh;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .btn-custom{
-    background-color: var(--verde-fuerte);
+    background-color: var(e);
   color: white;
   border: none;
   border-radius: 15px; 
@@ -40,7 +40,7 @@
 }
 
 .a-custom{
-    color: var(--verde-fuerte);
+    color: var(e);
     text-decoration: none;
 }
 

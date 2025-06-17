@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootView from "../views/routing/RootView";
 import HomeView from "../views/HomeView";
-
 import LoginView from "../views/LoginView";
 import RegisterView from "../views/RegisterView";
 import TiendaOnlineView from "../views/TiendaOnlineView.jsx";
@@ -30,7 +29,7 @@ export const router = createBrowserRouter([
         element: <TiendaOnlineView />,
       },
       {
-        path: "/admin",
+        path: "admin",
         element: <AdminView />,
       },
       {
