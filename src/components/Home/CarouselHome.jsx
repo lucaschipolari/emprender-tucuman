@@ -16,7 +16,7 @@ const CarouselHome = () => {
                 className="carousel-background"
                 alt="imagen de cerro"
               />
-              <div class="carousel-caption-custom">
+              <div className="carousel-caption-custom">
                 <div>
                   <h2 className="titulo">EMPRENDER </h2>
                   <h2 className="titulo">TUCUMÁN</h2>

@@ -35,7 +35,6 @@ export const postRegisterFn = async (data) => {
       email: data.email,
       password: data.password,
     });
-    
     return userData;
   } catch (error) {
     const message = error.response?.data?.message || error.message || "Ocurrió un error";
