@@ -19,7 +19,7 @@ const PublicationCard = ({
   categoriaId,
   fechaPublicacion,
   onActionCompleted,
-  setMostrarFormulario,
+  setMostrarFormularioPublicacion,
   calificacionPromedio,
 }) => {
   const { setPublicacionSeleccionada } = usePublicacionStore();
@@ -50,7 +50,7 @@ const PublicationCard = ({
       estaEnOferta,
       precioOferta,
     });
-    setMostrarFormulario(true);
+    setMostrarFormularioPublicacion(true);
   };
 
   const handlePausar = async () => {

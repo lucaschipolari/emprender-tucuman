@@ -163,7 +163,7 @@ const FormularioPublicacion = ({ onClose, handleActionCompleted }) => {
                     >
                       <option value="">Seleccionar categoría</option>
                       {categorias.map((cat) => (
-                        <option key={cat.id} value={cat.id.toString()}>
+                        <option key={cat.id} value={cat.id}>
                           {cat.nombre}
                         </option>
                       ))}

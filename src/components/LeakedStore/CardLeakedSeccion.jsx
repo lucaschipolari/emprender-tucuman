@@ -12,7 +12,7 @@ const CardLeakedSeccion = ({ productos = [], loading }) => {
     const obtenerCategorias = async () => {
       try {
         const response = await getCategorias();
-        setCategorias(response.data.data);
+        setCategorias(response);
       } catch (error) {
         console.error("Error al obtener categorías:", error);
       }
@@ -79,18 +79,16 @@ const CardLeakedSeccion = ({ productos = [], loading }) => {
                     <div className="d-flex align-items-center mb-2">
                       <img
                         src={
-                          producto.emprendedor?.imagen ||
+                          producto.emprendedor?.fotoPerfil ||
                           "/emprendedor-miguel.png"
                         }
-                        alt="Emprendedor"
+                        alt="imagen"
                         className="rounded-circle me-2"
                         width="40"
                         height="40"
                       />
                       <div>
-                        <h6 className="mb-0">
-                          {producto.emprendedor?.nombre || "Emprendedor"}
-                        </h6>
+                        <h6 className="mb-0">{producto.emprendedor?.nombre}</h6>
                         <span className="badge bg-primary badge-categoria">
                           {nombreCategoria(producto.categoriaId)}
                         </span>

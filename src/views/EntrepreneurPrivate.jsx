@@ -3,48 +3,73 @@ import EntrepreneurProfile from "../components/EntrepreneurProfile/EntrepreneurP
 import Options from "../components/EntrepreneurProfile/Options";
 import PublicationCard from "../components/EntrepreneurProfile/PublicationCard";
 import FormularioPublicacion from "../components/EntrepreneurProfile/FormularioPublicacion";
-import { getPublicacionesEmprendedor } from "../api/publicaciones.js";
 import usePublicacionStore from "../stores/usePublicationStore.js";
 import PublicationCardSkeleton from "../components/EntrepreneurProfile/PublicationCardSkeleton.jsx";
-
+import { obtenerMisPublicaciones } from "../api/publicaciones.js";
+import { obtenerEmprendedor } from "../api/emprendedores.js";
+import EntepreneurForm from "../components/EntrepreneurProfile/EntepreneurForm.jsx";
 const EntrepreneurPrivate = () => {
   const [publicaciones, setPublicaciones] = useState([]);
-  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+  const [mostrarFormularioPublicacion, setMostrarFormularioPublicacion] =
+    useState(false);
+  const [mostrarFormularioEmprendedor, setMostrarFormularioEmprendedor] =
+    useState(false);
+  const [emprendedor, setEmprendedor] = useState(false);
   const { clearPublicacionSeleccionada } = usePublicacionStore();
   const [isLoading, setIsLoading] = useState(true);
-  const handleCrearClick = () => {
-    clearPublicacionSeleccionada();
-    setMostrarFormulario(true);
+
+  const handleCrearClickEmprendedor = () => {
+    setMostrarFormularioEmprendedor(true);
   };
+  const handleCrearClickPublicacion = () => {
+    clearPublicacionSeleccionada();
+    setMostrarFormularioPublicacion(true);
+  };
+
+  // EXTRAÍDO para reutilizarlo
+  const fetchEmprendedor = async () => {
+    try {
+      const data = await obtenerEmprendedor();
+      setEmprendedor(data);
+    } catch (error) {
+      console.error("Error al obtener emprendedor:", error);
+    }
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchPublicaciones = async () => {
       try {
-        const data = await getPublicacionesEmprendedor();
-        setTimeout(() => {
-          setPublicaciones(data);
-          setIsLoading(false); // solo aquí
-        }, 600);
+        const data = await obtenerMisPublicaciones();
+        setPublicaciones(data);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error al obtener publicaciones:", error);
-        setIsLoading(false); // solo si hay error
+        setIsLoading(false);
       }
     };
 
-    fetchData();
+    fetchPublicaciones();
+    fetchEmprendedor();
   }, []);
 
   const refreshPublicaciones = async () => {
-    setIsLoading(true); // activa el loading antes de empezar
+    setIsLoading(true);
     try {
-      const data = await getPublicacionesEmprendedor();
+      const data = await obtenerMisPublicaciones();
       setTimeout(() => {
         setPublicaciones(data);
-        setIsLoading(false); // solo aquí
-      }, 600);
+        setIsLoading(false);
+      }, 20);
     } catch (error) {
       console.error("Error al obtener publicaciones:", error);
-      setIsLoading(false); // solo si hay error
+      setIsLoading(false);
     }
+  };
+
+  // 🔁 ACTUALIZA EMPRENDEDOR Y CIERRA FORMULARIO
+  const handleActionPerfilEmprendedor = async () => {
+    await fetchEmprendedor();
+    setMostrarFormularioEmprendedor(false);
   };
 
   const handleActionCompleted = () => {
@@ -53,12 +78,24 @@ const EntrepreneurPrivate = () => {
 
   return (
     <div>
-      <EntrepreneurProfile />
-      <Options onCrearClick={handleCrearClick} />
-      {mostrarFormulario && (
+      <EntrepreneurProfile
+        emprendedor={emprendedor}
+        handleCrearClickEmprendedor={handleCrearClickEmprendedor}
+      />
+      <Options onCrearClick={handleCrearClickPublicacion} />
+
+      {mostrarFormularioPublicacion && (
         <FormularioPublicacion
-          onClose={() => setMostrarFormulario(false)}
+          onClose={() => setMostrarFormularioPublicacion(false)}
           handleActionCompleted={handleActionCompleted}
+        />
+      )}
+
+      {mostrarFormularioEmprendedor && (
+        <EntepreneurForm
+          emprendedor={emprendedor}
+          onClose={() => setMostrarFormularioEmprendedor(false)}
+          handleActionCompleted={handleActionPerfilEmprendedor}
         />
       )}
 
@@ -89,7 +126,9 @@ const EntrepreneurPrivate = () => {
                   activa={pub.activa}
                   fechaPublicacion={pub.fechaPublicacion}
                   onActionCompleted={handleActionCompleted}
-                  setMostrarFormulario={setMostrarFormulario}
+                  setMostrarFormularioPublicacion={
+                    setMostrarFormularioPublicacion
+                  }
                   categoriaId={pub.categoriaId}
                   calificacionPromedio={pub.calificacionPromedio}
                 />

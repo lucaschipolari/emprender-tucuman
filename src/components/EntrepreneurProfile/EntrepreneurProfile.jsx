@@ -10,36 +10,59 @@ import {
   FaShareAlt,
 } from "react-icons/fa";
 
-const EntrepreneurProfile = () => {
+const EntrepreneurProfile = ({ emprendedor, handleCrearClickEmprendedor }) => {
+  if (!emprendedor) return <p>Cargando perfil...</p>;
+
   return (
     <div className="profile-card">
       <div className="area-perfil">
         <div className="banner">
           <img
-            src="/logoEmprenderTucuman.jpeg"
+            src={emprendedor.portada || "/logoEmprenderTucuman.jpeg"}
             alt="Banner"
             className="banner-img"
           />
           <div className="logo-container">
-            <img src="/emprendedor-ana.png" alt="Logo" className="logo-img" />
+            <img
+              src={emprendedor.fotoPerfil || "/emprendedor-ana.png"}
+              alt="Foto de perfil"
+              className="logo-img"
+            />
           </div>
-          <button className="edit-button">Editar perfil</button>
+          <button className="edit-button" onClick={handleCrearClickEmprendedor}>
+            Editar perfil
+          </button>
         </div>
 
         <div className="profile-body">
-          <h2 className="profile-title">MI emprendimiento</h2>
+          <h2 className="profile-title">{emprendedor.nombre}</h2>
           <p className="description">
-            Productos orgánicos <span className="divider">|</span> XX.XXX
-            seguidores
+            {emprendedor.descripcion || "Sin descripción"}{" "}
+            <span className="divider">|</span> XX.XXX seguidores
           </p>
           <p className="location">
-            <FaMapMarkerAlt /> Rivadavia 1000, San Miguel de Tucumán, Tucumán,
-            Argentina
+            <FaMapMarkerAlt /> {emprendedor.direccion || "Sin dirección"}
           </p>
           <div className="social-icons">
-            <FaInstagram />
-            <FaWhatsapp />
-            <FaFacebookF />
+            {emprendedor.instagram && (
+              <a href={emprendedor.instagram} target="_blank" rel="noreferrer">
+                <FaInstagram />
+              </a>
+            )}
+            {emprendedor.whatsApp && (
+              <a
+                href={`https://wa.me/${emprendedor.whatsApp}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaWhatsapp />
+              </a>
+            )}
+            {emprendedor.facebook && (
+              <a href={emprendedor.facebook} target="_blank" rel="noreferrer">
+                <FaFacebookF />
+              </a>
+            )}
           </div>
         </div>
       </div>

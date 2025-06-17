@@ -39,3 +39,12 @@ export const uploadImagen = async (file) => {
 
   return res.data;
 };
+export const obtenerMisPublicaciones = async () => {
+  const res = await api.get(`/Publicacion/mis-publicaciones`);
+  return res.data.data;
+};
+
+export const publicacionesPorEmprendedor = async (emprendimientoId) => {
+  const res = await api.get(`/Publicacion/emprendedor/${emprendimientoId}`);
+  return res.data.data;
+};
