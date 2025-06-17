@@ -8,7 +8,7 @@ const OurValues = () => {
         <div className="row">
           <div className="col-12 col-sm-4">
             <div className="d-flex w-100 justify-content-center align-items-center gap-3">
-              <i class="bi bi-bag-check icono-valores"></i>
+              <i className="bi bi-bag-check icono-valores"></i>
               <h2 className="m-0">Comercio local</h2>
             </div>
             <p className="justify-text">
@@ -19,7 +19,7 @@ const OurValues = () => {
           </div>
           <div className="col-12 col-sm-4">
             <div className="d-flex w-100 justify-content-center align-items-center gap-3">
-              <i class="bi bi-people-fill icono-valores"></i>
+              <i className="bi bi-people-fill icono-valores"></i>
               <h2 className="m-0">Comunidad</h2>
             </div>
             <p className="justify-text">
@@ -32,7 +32,7 @@ const OurValues = () => {
           <div className="col-12 col-sm-4">
             <div className="d-flex justify-content-center">
               <div className="d-flex w-100 justify-content-center align-items-center gap-3">
-                <i class="bi bi-shuffle icono-valores"></i>
+                <i className="bi bi-shuffle icono-valores"></i>
                 <h2 className="m-0">Conectar</h2>
               </div>
             </div>
